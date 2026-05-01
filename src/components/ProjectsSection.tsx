@@ -41,7 +41,7 @@ const projects = [
     title: "WeatherED",
     description: "A real-time weather dashboard that fetches data from OpenWeather APIs, providing users with snappy, location-based atmospheric insights.",
     tags: ["React", "REST API", "Tailwind CSS"],
-    link: "weather-app-nine-mu-65.vercel.app",
+    link: "https://weather-app-nine-mu-65.vercel.app",
     github: "https://github.com/edvv1n",
   },
 ];
