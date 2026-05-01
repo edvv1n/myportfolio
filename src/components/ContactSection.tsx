@@ -1,6 +1,6 @@
 import { motion } from "framer-motion";
 // Swapped Twitter for X
-import { Mail, Github, Linkedin, X } from "lucide-react";
+import { Mail, Github, Linkedin, X, Phone, MessageCircle } from "lucide-react";
 
 const ContactSection = () => {
   return (
@@ -22,13 +22,33 @@ const ContactSection = () => {
             Got a project in mind? Whether it's a custom React app or a CMS-powered site, I'd love to hear from you.
           </p>
 
-          <a
-            href="mailto:edvvinudofia@gmail.com"
-            className="inline-flex items-center gap-2 px-8 py-3 rounded-full bg-primary text-primary-foreground font-medium hover:opacity-90 transition-opacity"
-          >
-            <Mail size={18} />
-            Send me an email
-          </a>
+          <div className="flex items-center justify-center gap-3">
+            <a
+              href="mailto:edvvinudofia@gmail.com"
+              className="inline-flex items-center gap-2 px-8 py-3 rounded-full bg-primary text-primary-foreground font-medium hover:opacity-90 transition-opacity"
+            >
+              <Mail size={18} />
+              Send me an email
+            </a>
+            
+            <a
+              href="tel:+2349036254001"
+              className="p-3 rounded-full border border-border text-muted-foreground hover:bg-muted hover:text-primary transition-all duration-200"
+              aria-label="Call me"
+            >
+              <Phone size={20} />
+            </a>
+
+            <a
+              href="https://wa.me/2348183146256"
+              target="_blank"
+              rel="noopener noreferrer"
+              className="p-3 rounded-full border border-border text-muted-foreground hover:bg-muted hover:text-green-600 transition-all duration-200"
+              aria-label="Message on WhatsApp"
+            >
+              <MessageCircle size={20} />
+            </a>
+          </div>
 
           <div className="flex items-center justify-center gap-6 mt-12">
             {[

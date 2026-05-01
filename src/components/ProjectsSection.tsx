@@ -10,11 +10,18 @@ const projects = [
     github: "https://github.com/edvv1n", 
   },
   {
-    title: "Womenful Voice",
-    description: "A professional non-profit website developed on Wix, featuring custom CMS integration to manage community outreach and advocacy programs.",
+    title: "Womenful Voice (WordPress)",
+    description: "A professional non-profit website developed on WordPress, featuring custom CMS integration to manage community outreach and advocacy programs.",
     tags: ["Wix", "CMS", "Non-Profit"],
     link: "https://womenfulvoice.org/",
-    platform: "wix", // Matches wix-svgrepo-com.svg
+    platform: "wordpress", // Matches Wordpress-svgrepo-com.svg
+  },
+  {
+    title: "Womenful Voice (Wix)",
+    description: "A professional non-profit website developed on Wix, featuring custom CMS integration to manage community outreach and advocacy programs.",
+    tags: ["Wix", "CMS", "Non-Profit"],
+    link: "https://smjean.wixsite.com/mysite?rc=test-site",
+    platform: "wix", // Matches Wix-svgrepo-com.svg
   },
   {
     title: "Global Women Cultural Exchange",
