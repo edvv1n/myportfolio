@@ -1,5 +1,5 @@
 Edwin Udofia | Frontend Engineer Portfolio
-A modern, high-performance portfolio built with React, Next.js, and Framer Motion. This project showcases a clean, "glassmorphism" aesthetic with system-aware dark mode, intersection observers for navigation highlighting, and a responsive mobile sidebar.
+A modern, high-performance portfolio built with React, Vite, TypeScript, and Framer Motion. This project showcases a clean, "glassmorphism" aesthetic with system-aware dark mode, intersection observers for navigation highlighting, and a responsive mobile sidebar.
 
 Live Demo
 [Insert Your Vercel/Netlify Link Here]
@@ -20,7 +20,7 @@ Frosted Glass UI: Premium background blur effects that maintain readability as c
 Project Showcase: Selected works featuring custom integrations for React, WordPress, and Wix projects.
 
 Tech Stack
-Framework: React.js / Next.js
+Framework: React / Vite
 
 Styling: Tailwind CSS
 
@@ -39,10 +39,10 @@ Plaintext
 │   └── ...                     # Other assets
 ├── src/
 │   ├── components/
-│   │   ├── Navbar.jsx          # Complex glassmorphism navigation
-│   │   ├── HeroSection.jsx     # Animated intro and CTA
-│   │   ├── ProjectsSection.jsx # Grid of selected works
-│   │   └── ContactSection.jsx  # Social links and email CTA
+│   │   ├── Navbar.tsx          # Complex glassmorphism navigation
+│   │   ├── HeroSection.tsx     # Animated intro and CTA
+│   │   ├── ProjectsSection.tsx # Grid of selected works
+│   │   └── ContactSection.tsx  # Social links and email CTA
 │   └── ...
 🛠️ Installation & Setup
 Clone the repository
@@ -81,4 +81,10 @@ Edwin Udofia - edvvinudofia@gmail.com
 
 Project Link: https://github.com/edvv1n/myportfolio
 
+Version 2.0
+
 Built with ❤️ in 2026
+
+### Setup
+Run `npm ci`, then `npm run dev`. Run `npm run build` for production; output is `dist/`.
+The source export excludes installed dependencies, Git history, and local environment files. Retain your existing private environment configuration when updating your deployed project.

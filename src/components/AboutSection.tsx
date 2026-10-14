@@ -5,6 +5,8 @@ const skills = [
   { name: "CSS3", category: "core" },
   { name: "JavaScript", category: "core" },
   { name: "React", category: "framework" },
+  { name: "Next.js", category: "framework" },
+  { name: "Headless CMS", category: "cms" },
   { name: "Tailwind CSS", category: "framework" },
   { name: "TypeScript", category: "framework" },
   { name: "WordPress", category: "cms" },
@@ -44,18 +46,15 @@ const AboutSection = () => {
             Crafting digital experiences
           </h3>
           <p className="text-muted-foreground leading-relaxed mb-4">
-            I’m a frontend engineer who’s honestly obsessed with the sweet spot
-            where a great design meets code that actually works the way it’s
-            supposed to. I spend most of my time building interfaces with
-            Next.js, TypeScript, and Tailwind CSS, focusing on making sure
-            everything I build is snappy, responsive, and feels intuitive from
-            the very first click.
+            I’m a frontend developer based in Lagos, building responsive websites
+            with React, Next.js, TypeScript, and Tailwind CSS. I care about clear
+            interfaces, readable code, and making websites easy for the people
+            who use and maintain them.
           </p>
           <p className="text-muted-foreground leading-relaxed mb-12">
-            Whether I’m mapping out a complex movie database or building a
-            real-time weather app, I’m always looking for ways to keep the user
-            experience seamless while making sure the tech under the hood is
-            rock solid.
+            My experience spans nonprofit websites, CMS migrations, and API-driven
+            applications. I also build integrations, from
+            registration emails to headless blogs and Gemini-powered chatbots.
           </p>
         </motion.div>
 
