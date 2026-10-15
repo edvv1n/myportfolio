@@ -7,7 +7,7 @@ Live Demo
 Features
 Dynamic Hero Section: Smooth text-swapping animation on initialization using Framer Motion.
 
-Intelligent Navigation: * Floating "pill" navbar with active section highlighting via Intersection Observer.
+Intelligent Navigation: \* Floating "pill" navbar with active section highlighting via Intersection Observer.
 
 Responsive mobile sidebar with staggered entry animations.
 
@@ -34,16 +34,16 @@ Project Structure
 Plaintext
 
 ├── public/
-│   ├── Wordpress-Logo.svg      # Custom CMS platform icon
-│   ├── wix-svgrepo-com.svg     # Custom CMS platform icon
-│   └── ...                     # Other assets
+│ ├── Wordpress-Logo.svg # Custom CMS platform icon
+│ ├── wix-svgrepo-com.svg # Custom CMS platform icon
+│ └── ... # Other assets
 ├── src/
-│   ├── components/
-│   │   ├── Navbar.tsx          # Complex glassmorphism navigation
-│   │   ├── HeroSection.tsx     # Animated intro and CTA
-│   │   ├── ProjectsSection.tsx # Grid of selected works
-│   │   └── ContactSection.tsx  # Social links and email CTA
-│   └── ...
+│ ├── components/
+│ │ ├── Navbar.tsx # Complex glassmorphism navigation
+│ │ ├── HeroSection.tsx # Animated intro and CTA
+│ │ ├── ProjectsSection.tsx # Grid of selected works
+│ │ └── ContactSection.tsx # Social links and email CTA
+│ └── ...
 🛠️ Installation & Setup
 Clone the repository
 
@@ -86,5 +86,6 @@ Version 2.0
 Built with ❤️ in 2026
 
 ### Setup
+
 Run `npm ci`, then `npm run dev`. Run `npm run build` for production; output is `dist/`.
 The source export excludes installed dependencies, Git history, and local environment files. Retain your existing private environment configuration when updating your deployed project.

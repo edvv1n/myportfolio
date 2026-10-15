@@ -15,8 +15,18 @@ describe("section navigation", () => {
     }
   });
   it("tracks transitions when scrolling down and back up", () => {
-    const active = [0, 750, 1620, 7050, 3000, 1000, 0].map(scroll => getActiveSection(positions(scroll), 200, false));
-    expect(active).toEqual(["home", "about", "projects", "contact", "projects", "about", "home"]);
+    const active = [0, 750, 1620, 7050, 3000, 1000, 0].map((scroll) =>
+      getActiveSection(positions(scroll), 200, false)
+    );
+    expect(active).toEqual([
+      "home",
+      "about",
+      "projects",
+      "contact",
+      "projects",
+      "about",
+      "home",
+    ]);
   });
   it("activates a short final section at the bottom of the page", () => {
     expect(getActiveSection(positions(6600), 200, true)).toBe("contact");

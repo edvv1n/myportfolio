@@ -79,7 +79,8 @@ const HeroSection = () => {
           transition={{ delay: 0.5, duration: 0.6 }}
           className="mt-6 text-base sm:text-lg text-muted-foreground max-w-lg mx-auto leading-relaxed"
         >
-          I’m Edwin Udofia. I build React experiences and WordPress websites for organizations, brands, and the ideas people care about.
+          I’m Edwin Udofia. I build React experiences and WordPress websites for
+          organizations, brands, and the ideas people care about.
         </motion.p>
 
         <motion.div

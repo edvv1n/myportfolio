@@ -14,7 +14,8 @@ export interface Project {
 export const projects: Project[] = [
   {
     title: "Human-Centered Computing Foundation",
-    description: "Migrated an eight-page WordPress website to React with a headless blog, validated API forms, and reusable page components. Ongoing maintenance keeps the foundation’s content current.",
+    description:
+      "Migrated an eight-page WordPress website to React with a headless blog, validated API forms, and reusable page components. Ongoing maintenance keeps the foundation’s content current.",
     tags: ["React", "TypeScript", "Tailwind CSS", "Headless CMS"],
     link: "https://hccf.onmy.cloud/",
     category: "Foundation website",
@@ -24,9 +25,14 @@ export const projects: Project[] = [
   },
   {
     title: "BingeBox",
-    description: "A movie discovery experience with TMDB-powered movie details and trailers, signup and movie request flows, and Jellyfin access. Currently in development.",
+    description:
+      "A movie discovery experience with TMDB-powered movie details and trailers, signup and movie request flows, and Jellyfin access. Currently in development.",
     tags: ["TMDB API", "WordPress", "Jellyfin"],
-    link: (import.meta.env.VITE_BINGEBOX_URL ?? "https://q4gwl87n-5173.uks1.devtunnels.ms/").trim() || undefined,
+    link:
+      (
+        import.meta.env.VITE_BINGEBOX_URL ??
+        "https://q4gwl87n-5173.uks1.devtunnels.ms/"
+      ).trim() || undefined,
     status: "In development",
     linkLabel: "View preview",
     category: "Entertainment platform",
@@ -36,7 +42,8 @@ export const projects: Project[] = [
   },
   {
     title: "Cohesion Africa",
-    description: "Built a youth football platform with tournament registration, blogs, and galleries. Automated ticket IDs and confirmation emails connect each applicant with the organizing team.",
+    description:
+      "Built a youth football platform with tournament registration, blogs, and galleries. Automated ticket IDs and confirmation emails connect each applicant with the organizing team.",
     tags: ["React", "Tailwind CSS", "Registration", "SMTP"],
     link: "https://cohesionafrica.com/",
     category: "Football & community",
@@ -46,7 +53,8 @@ export const projects: Project[] = [
   },
   {
     title: "Womenful Voice (WordPress)",
-    description: "Rebuilt and migrated the nonprofit’s 14-page Wix website to WordPress and Elementor to reduce hosting costs. Added blog management and contact forms, and trained staff to manage content.",
+    description:
+      "Rebuilt and migrated the nonprofit’s 14-page Wix website to WordPress and Elementor to reduce hosting costs. Added blog management and contact forms, and trained staff to manage content.",
     tags: ["WordPress", "Elementor", "Contact Form 7", "CMS migration"],
     link: "https://womenfulvoice.org/",
     category: "Nonprofit / WordPress rebuild",
@@ -56,7 +64,8 @@ export const projects: Project[] = [
   },
   {
     title: "Womenful Voice (Wix)",
-    description: "The organization’s original Wix website, built to present its programs and community outreach. This earlier version laid the foundation for the later WordPress migration.",
+    description:
+      "The organization’s original Wix website, built to present its programs and community outreach. This earlier version laid the foundation for the later WordPress migration.",
     tags: ["Wix", "CMS", "Nonprofit"],
     link: "https://smjean.wixsite.com/mysite?rc=test-site",
     category: "Nonprofit / original website",
@@ -67,7 +76,8 @@ export const projects: Project[] = [
   },
   {
     title: "Global Women Cultural Exchange",
-    description: "A WordPress website bringing together the organization’s mission, programs, and opportunities to get involved, supporting cultural exchange and connection among women.",
+    description:
+      "A WordPress website bringing together the organization’s mission, programs, and opportunities to get involved, supporting cultural exchange and connection among women.",
     tags: ["WordPress", "Elementor", "Nonprofit"],
     link: "https://globalwomenculturalexchange.org/",
     category: "Community & cultural exchange",
@@ -77,7 +87,8 @@ export const projects: Project[] = [
   },
   {
     title: "Senska Portfolio",
-    description: "A personal brand website that brings together leadership, ventures, and services through a responsive React interface, modular components, and subtle animation.",
+    description:
+      "A personal brand website that brings together leadership, ventures, and services through a responsive React interface, modular components, and subtle animation.",
     tags: ["React", "Framer Motion", "JavaScript"],
     link: "https://senska.vercel.app/",
     category: "Personal brand website",
@@ -87,7 +98,8 @@ export const projects: Project[] = [
   },
   {
     title: "WeatherED",
-    description: "A responsive weather application using OpenWeatherMap for location-based forecasts, with video backgrounds that change to reflect live weather conditions.",
+    description:
+      "A responsive weather application using OpenWeatherMap for location-based forecasts, with video backgrounds that change to reflect live weather conditions.",
     tags: ["Next.js", "TypeScript", "OpenWeatherMap"],
     link: "https://weather-app-nine-mu-65.vercel.app",
     category: "Weather application",

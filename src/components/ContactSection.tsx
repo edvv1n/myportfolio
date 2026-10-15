@@ -19,7 +19,8 @@ const ContactSection = () => {
             Let's work together
           </h3>
           <p className="text-muted-foreground max-w-md mx-auto mb-8 leading-relaxed">
-            Got a project in mind? Whether it's a custom React app or a CMS-powered site, I'd love to hear from you.
+            Got a project in mind? Whether it's a custom React app or a
+            CMS-powered site, I'd love to hear from you.
           </p>
 
           <div className="flex items-center justify-center gap-3">
@@ -30,7 +31,7 @@ const ContactSection = () => {
               <Mail size={18} />
               Send me an email
             </a>
-            
+
             <a
               href="tel:+2349036254001"
               className="p-3 rounded-full border border-border text-muted-foreground hover:bg-muted hover:text-primary transition-all duration-200"
@@ -52,9 +53,21 @@ const ContactSection = () => {
 
           <div className="flex items-center justify-center gap-6 mt-12">
             {[
-              { icon: Github, href: "https://github.com/edvv1n", label: "GitHub" },
-              { icon: Linkedin, href: "https://www.linkedin.com/in/edwinudofia/", label: "LinkedIn" },
-              { icon: X, href: "https://www.x.com/edwin_udofia/", label: "X (Twitter)" },
+              {
+                icon: Github,
+                href: "https://github.com/edvv1n",
+                label: "GitHub",
+              },
+              {
+                icon: Linkedin,
+                href: "https://www.linkedin.com/in/edwinudofia/",
+                label: "LinkedIn",
+              },
+              {
+                icon: X,
+                href: "https://www.x.com/edwin_udofia/",
+                label: "X (Twitter)",
+              },
             ].map(({ icon: Icon, href, label }) => (
               <a
                 key={label}

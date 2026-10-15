@@ -19,7 +19,9 @@ const Navbar = () => {
   const [activeSection, setActiveSection] = useState("home");
 
   useEffect(() => {
-    const systemPrefersDark = window.matchMedia("(prefers-color-scheme: dark)").matches;
+    const systemPrefersDark = window.matchMedia(
+      "(prefers-color-scheme: dark)"
+    ).matches;
     setIsDark(systemPrefersDark);
     document.documentElement.classList.toggle("dark", systemPrefersDark);
   }, []);
@@ -33,11 +35,21 @@ const Navbar = () => {
       setScrolled(window.scrollY > 20);
       const sections = navLinks.flatMap(({ id }) => {
         const element = document.getElementById(id);
-        return element ? [{ id, top: element.getBoundingClientRect().top }] : [];
+        return element
+          ? [{ id, top: element.getBoundingClientRect().top }]
+          : [];
       });
-      const atBottom = window.scrollY > 0 &&
-        window.scrollY + window.innerHeight >= document.documentElement.scrollHeight - 2;
-      setActiveSection(getActiveSection(sections, Math.min(200, Math.max(96, window.innerHeight * 0.25)), atBottom));
+      const atBottom =
+        window.scrollY > 0 &&
+        window.scrollY + window.innerHeight >=
+          document.documentElement.scrollHeight - 2;
+      setActiveSection(
+        getActiveSection(
+          sections,
+          Math.min(200, Math.max(96, window.innerHeight * 0.25)),
+          atBottom
+        )
+      );
     };
     const scheduleUpdate = () => {
       if (!frame) frame = window.requestAnimationFrame(updateSection);
@@ -67,14 +79,22 @@ const Navbar = () => {
     const handleKey = (event: KeyboardEvent) => {
       if (event.key === "Escape") setIsOpen(false);
       if (event.key === "Tab") {
-        const links = Array.from(panelRef.current?.querySelectorAll<HTMLElement>("a") ?? []);
-        const items = [toggleRef.current, ...links].filter(Boolean) as HTMLElement[];
+        const links = Array.from(
+          panelRef.current?.querySelectorAll<HTMLElement>("a") ?? []
+        );
+        const items = [toggleRef.current, ...links].filter(
+          Boolean
+        ) as HTMLElement[];
         const index = items.indexOf(document.activeElement as HTMLElement);
         event.preventDefault();
-        items[(index + (event.shiftKey ? -1 : 1) + items.length) % items.length]?.focus();
+        items[
+          (index + (event.shiftKey ? -1 : 1) + items.length) % items.length
+        ]?.focus();
       }
     };
-    const closeOnDesktop = () => { if (window.innerWidth >= 768) setIsOpen(false); };
+    const closeOnDesktop = () => {
+      if (window.innerWidth >= 768) setIsOpen(false);
+    };
     window.addEventListener("keydown", handleKey);
     window.addEventListener("resize", closeOnDesktop);
     return () => {
@@ -100,18 +120,19 @@ const Navbar = () => {
         className="fixed top-0 left-0 right-0 z-[80] flex justify-center transition-all duration-500"
       >
         {/* Full-width Frosted Glass Background Layer */}
-        <div 
+        <div
           className={`absolute inset-0 transition-all duration-500 -z-10 ${
-            scrolled 
-              ? "h-20 bg-background/60 backdrop-blur-md border-b border-border/50 opacity-100" 
+            scrolled
+              ? "h-20 bg-background/60 backdrop-blur-md border-b border-border/50 opacity-100"
               : "h-0 opacity-0"
-          }`} 
+          }`}
         />
 
-        <div className={`w-full max-w-7xl grid grid-cols-[1fr_auto] md:grid-cols-[1fr_auto_1fr] items-center px-6 transition-all duration-500 ${
-          scrolled ? "h-20" : "h-24"
-        }`}>
-          
+        <div
+          className={`w-full max-w-7xl grid grid-cols-[1fr_auto] md:grid-cols-[1fr_auto_1fr] items-center px-6 transition-all duration-500 ${
+            scrolled ? "h-20" : "h-24"
+          }`}
+        >
           {/* Logo (Left) */}
           <div className="justify-self-start">
             <AnimatePresence>
@@ -130,19 +151,23 @@ const Navbar = () => {
           </div>
 
           {/* Desktop Navigation Pill (Center) */}
-          <div className={`hidden md:flex justify-self-center items-center gap-1 rounded-full px-2 py-2 transition-all duration-500 border ${
-            scrolled 
-              ? "bg-secondary/30 border-border/50 shadow-sm" 
-              : "bg-transparent border-transparent"
-          }`}>
+          <div
+            className={`hidden md:flex justify-self-center items-center gap-1 rounded-full px-2 py-2 transition-all duration-500 border ${
+              scrolled
+                ? "bg-secondary/30 border-border/50 shadow-sm"
+                : "bg-transparent border-transparent"
+            }`}
+          >
             {navLinks.map((link) => (
               <a
                 key={link.href}
                 href={link.href}
-                aria-current={activeSection === link.id ? "location" : undefined}
+                aria-current={
+                  activeSection === link.id ? "location" : undefined
+                }
                 className={`relative isolate px-4 py-2 rounded-full text-sm font-medium transition-all duration-300 ${
-                  activeSection === link.id 
-                    ? "text-primary-foreground" 
+                  activeSection === link.id
+                    ? "text-primary-foreground"
                     : "text-foreground hover:opacity-70"
                 }`}
               >
@@ -164,8 +189,8 @@ const Navbar = () => {
               onClick={toggleTheme}
               aria-label="Toggle theme"
               className={`hidden md:flex rounded-full p-3 transition-all duration-500 border ${
-                scrolled 
-                  ? "bg-secondary/30 border-border/50 shadow-sm" 
+                scrolled
+                  ? "bg-secondary/30 border-border/50 shadow-sm"
                   : "bg-transparent border-transparent"
               } text-foreground hover:text-primary`}
             >
@@ -173,17 +198,38 @@ const Navbar = () => {
             </button>
 
             {/* Mobile Control Pill */}
-            <div className={`flex md:hidden items-center gap-1 rounded-full p-1.5 transition-all duration-500 border shadow-lg ${
-              scrolled 
-                ? "bg-secondary/50 border-border" 
-                : "bg-background/40 backdrop-blur-sm border-border/50"
-            }`}>
-              <button onClick={toggleTheme} className="p-2.5 rounded-full text-foreground" aria-label="Toggle theme">
+            <div
+              className={`flex md:hidden items-center gap-1 rounded-full p-1.5 transition-all duration-500 border shadow-lg ${
+                scrolled
+                  ? "bg-secondary/50 border-border"
+                  : "bg-background/40 backdrop-blur-sm border-border/50"
+              }`}
+            >
+              <button
+                onClick={toggleTheme}
+                className="p-2.5 rounded-full text-foreground"
+                aria-label="Toggle theme"
+              >
                 {isDark ? <Sun size={18} /> : <Moon size={18} />}
               </button>
               <div className="w-[1px] h-4 bg-border mx-0.5" />
-              <button ref={toggleRef} onClick={() => setIsOpen(open => !open)} className="p-2.5 rounded-full text-foreground" aria-label={isOpen ? "Close menu" : "Open menu"} aria-expanded={isOpen} aria-controls="mobile-navigation" data-menu-open={isOpen}>
-                <span className={`hamburger ${isOpen ? "is-open" : ""}`} aria-hidden="true"><span /><span /><span /></span>
+              <button
+                ref={toggleRef}
+                onClick={() => setIsOpen((open) => !open)}
+                className="p-2.5 rounded-full text-foreground"
+                aria-label={isOpen ? "Close menu" : "Open menu"}
+                aria-expanded={isOpen}
+                aria-controls="mobile-navigation"
+                data-menu-open={isOpen}
+              >
+                <span
+                  className={`hamburger ${isOpen ? "is-open" : ""}`}
+                  aria-hidden="true"
+                >
+                  <span />
+                  <span />
+                  <span />
+                </span>
               </button>
             </div>
           </div>
@@ -211,16 +257,21 @@ const Navbar = () => {
               id="mobile-navigation"
               className="mobile-glass-menu fixed top-0 right-0 h-[100dvh] w-[min(85vw,340px)] border-l border-white/20 z-[70] md:hidden flex flex-col pt-28"
             >
-              <nav aria-label="Mobile navigation" className="flex flex-col gap-2 px-4 mt-8">
+              <nav
+                aria-label="Mobile navigation"
+                className="flex flex-col gap-2 px-4 mt-8"
+              >
                 {navLinks.map((link) => (
                   <motion.a
                     key={link.href}
                     href={link.href}
-                aria-current={activeSection === link.id ? "location" : undefined}
+                    aria-current={
+                      activeSection === link.id ? "location" : undefined
+                    }
                     onClick={() => setIsOpen(false)}
                     className={`px-6 py-4 rounded-2xl text-xl font-semibold transition-colors ${
-                      activeSection === link.id 
-                        ? "bg-primary text-primary-foreground" 
+                      activeSection === link.id
+                        ? "bg-primary text-primary-foreground"
                         : "text-foreground hover:bg-primary/10"
                     }`}
                   >

@@ -46,14 +46,14 @@ const AboutSection = () => {
             Crafting digital experiences
           </h3>
           <p className="text-muted-foreground leading-relaxed mb-4">
-            I’m a frontend developer based in Lagos, building responsive websites
-            with React, Next.js, TypeScript, and Tailwind CSS. I care about clear
-            interfaces, readable code, and making websites easy for the people
-            who use and maintain them.
+            I’m a frontend developer based in Lagos, building responsive
+            websites with React, Next.js, TypeScript, and Tailwind CSS. I care
+            about clear interfaces, readable code, and making websites easy for
+            the people who use and maintain them.
           </p>
           <p className="text-muted-foreground leading-relaxed mb-12">
-            My experience spans nonprofit websites, CMS migrations, and API-driven
-            applications. I also build integrations, from
+            My experience spans nonprofit websites, CMS migrations, and
+            API-driven applications. I also build integrations, from
             registration emails to headless blogs and Gemini-powered chatbots.
           </p>
         </motion.div>
